@@ -1,0 +1,16 @@
+{
+  "redirects": {
+    "abc123456": {
+      "target": "aHR0cHM6Ly9leGFtcGxlLmNvbQ==",
+      "created": "2026-04-18T12:00:00Z"
+    },
+    "def789012": {
+      "target": "aHR0cHM6Ly9nb29nbGUuY29t",
+      "created": "2026-04-18T12:30:00Z"
+    },
+    "ghi345678": {
+      "target": "aHR0cHM6Ly93d3cuamF2YXNjcmlwdC5jb20",
+      "created": "2026-04-18T13:00:00Z"
+    }
+  }
+}
