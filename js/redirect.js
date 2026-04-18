@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // 加载重定向配置
-        fetch('./data/redirects.json')
+        fetch('/data/redirects.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('无法加载重定向配置');
