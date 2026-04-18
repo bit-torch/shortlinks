@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>错误提示</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="redirect-page">
+    <div class="container">
+        <header>
+            <h1>错误提示</h1>
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+        </header>
+        
+        <main>
+            <section class="redirect-content">
+                <div class="countdown-container">
+                    <div class="error-icon" id="error-icon">⚠️</div>
+                    <div class="error-title" id="error-title">发生错误</div>
+                    <p id="error-message">操作过程中发生了错误</p>
+                </div>
+                
+                <div class="link-info">
+                    <p>您访问的链接: <span id="short-link"></span></p>
+                </div>
+                
+                <button id="home-btn" class="redirect-btn" onclick="window.location.href='/'">返回首页</button>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2026 比特火炬-短链接服务</p>
+        </footer>
+    </div>
+    
+    <script src="../js/theme.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 从URL参数获取错误信息
+            const urlParams = new URLSearchParams(window.location.search);
+            const errorType = urlParams.get('type');
+            const errorMessage = urlParams.get('message');
+            
+            // 更新错误信息
+            const errorTitle = document.getElementById('error-title');
+            const errorMsgElement = document.getElementById('error-message');
+            const errorIcon = document.getElementById('error-icon');
+            
+            // 根据错误类型设置不同的图标和标题
+            switch(errorType) {
+                case 'decode':
+                    errorIcon.textContent = '🔐';
+                    errorTitle.textContent = 'URL解码失败';
+                    errorMsgElement.textContent = errorMessage || '目标URL解码过程中发生错误';
+                    break;
+                case 'url':
+                    errorIcon.textContent = '🔗';
+                    errorTitle.textContent = '无效的URL';
+                    errorMsgElement.textContent = errorMessage || '目标URL格式不正确';
+                    break;
+                case 'config':
+                    errorIcon.textContent = '📄';
+                    errorTitle.textContent = '配置加载失败';
+                    errorMsgElement.textContent = errorMessage || '无法加载重定向配置文件';
+                    break;
+                default:
+                    errorIcon.textContent = '⚠️';
+                    errorTitle.textContent = '发生错误';
+                    errorMsgElement.textContent = errorMessage || '操作过程中发生了错误';
+            }
+            
+            // 显示当前URL
+            const shortLinkElement = document.getElementById('short-link');
+            if (shortLinkElement) {
+                shortLinkElement.textContent = window.location.href;
+            }
+        });
+    </script>
+</body>
+</html>
