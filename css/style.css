@@ -372,12 +372,6 @@ main {
 }
 
 /* 重定向页面 */
-.redirect-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 200px);
-}
 
 .redirect-content {
     text-align: center;
@@ -385,11 +379,12 @@ main {
     background: var(--gradient-glass);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border);
     border-radius: 32px;
     box-shadow: var(--shadow);
     max-width: 500px;
     width: 100%;
+    margin: 4rem auto;
 }
 
 /* 倒计时 */
@@ -400,7 +395,7 @@ main {
 .countdown {
     font-size: 6rem;
     font-weight: 700;
-    background: var(--gradient-secondary);
+    background: var(--gradient-accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -449,7 +444,7 @@ main {
 
 /* 跳转按钮 */
 .redirect-btn {
-    background: var(--gradient-secondary);
+    background: var(--gradient-accent);
     border: none;
     color: white;
     padding: 1rem 2.5rem;
@@ -464,7 +459,7 @@ main {
 
 .redirect-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+    box-shadow: 0 10px 30px rgba(255, 159, 28, 0.4);
 }
 
 /* 错误消息 */
