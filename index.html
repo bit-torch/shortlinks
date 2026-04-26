@@ -3,48 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>比特火炬-短链接重定向服务</title>
+    <title>比特火炬 - 短链接重定向服务</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- 背景装饰 -->
+    <div class="background-decor"></div>
+    
     <div class="container">
-        <header>
-            <h1>SHORTLINK</h1>
-            <button id="theme-toggle" class="theme-btn">🌙</button>
+        <header class="header">
+            <div class="logo">
+                <h1>BIT<span class="accent">LINK</span></h1>
+                <p class="tagline">比特火炬</p>
+            </div>
+            <button id="theme-toggle" class="theme-btn">
+                <span class="theme-icon">🌙</span>
+            </button>
         </header>
         
         <main>
             <section class="hero">
-                <h2>比特火炬-短链接服务</h2>
-                <p>快速、安全、美观的链接重定向解决方案</p>
-                <div class="grid">
-                    <div class="feature">
-                        <div class="feature-icon">🔗</div>
-                        <h3>简洁URL</h3>
-                        <p>生成短而美观的链接</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">⏱️</div>
-                        <h3>3秒跳转</h3>
-                        <p>访问后自动跳转</p>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🔒</div>
-                        <h3>安全加密</h3>
-                        <p>目标URL加密存储</p>
+                <div class="hero-content">
+                    <h2 class="hero-title">短链接服务</h2>
+                    <p class="hero-subtitle">快速、安全、美观的链接重定向解决方案</p>
+                    <div class="hero-features">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">简洁URL</h3>
+                            <p class="feature-desc">生成短而美观的链接</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">3秒跳转</h3>
+                            <p class="feature-desc">访问后自动跳转</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <h3 class="feature-title">安全加密</h3>
+                            <p class="feature-desc">目标URL加密存储</p>
+                        </div>
                     </div>
                 </div>
             </section>
             
             <section class="usage">
-                <h2>使用方式</h2>
-                <code>s.1378091.xyz/u/?id={8-12位随机字符}</code>
-                <p>访问上述格式的链接，将在3秒后跳转到目标页面</p>
+                <div class="usage-content">
+                    <h2 class="section-title">使用方式</h2>
+                    <div class="code-block">
+                        <code>s.1378091.xyz/u/?id={8-12位随机字符}</code>
+                    </div>
+                    <p class="usage-desc">访问上述格式的链接，将在3秒后跳转到目标页面</p>
+                </div>
             </section>
         </main>
         
-        <footer>
-            <p>&copy; 2026 比特火炬-短链接服务</p>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>BIT<span class="accent">LINK</span></h3>
+                </div>
+                <p class="footer-copyright">&copy; 2026 比特火炬 - 短链接服务</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">关于我们</a>
+                    <a href="#" class="footer-link">使用条款</a>
+                    <a href="#" class="footer-link">隐私政策</a>
+                </div>
+            </div>
         </footer>
     </div>
     
